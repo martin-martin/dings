@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dings"
+version = "1.0.0"
+description = "Fetch and search physical library items catalogue"
+readme = "README.md"
+authors = [{ name = "Martin Breuss", email = "breuss.martin@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["dingeborg", "library", "graz"]
+dependencies = [
+  "beautifulsoup4",
+  "requests"
+]
+requires-python = ">=3.9"
+
+[project.scripts]
+dings = "dings.__main__:main"
